@@ -1,0 +1,9 @@
+Did this work?
+<div>
+  <h2>Hidden Tracks</h2>
+    {{#each model as |song| }}
+      <p>{{song.song_title}}, {{song.song_url}}, {{song.user.email}}</p>
+    {{/each}}
+</div>
+
+{{outlet}}
