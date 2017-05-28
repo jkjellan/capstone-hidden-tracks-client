@@ -1,9 +1,11 @@
-Did this work?
-<div>
-  <h2>Hidden Tracks</h2>
-    {{#each model as |song| }}
-      <p>{{song.id}}, {{song.song_title}}, {{song.song_url}}, {{song.user.email}}, {{song.user.id}}</p>
-    {{/each}}
+<div class="containter-fluid">
+  <div class="row">
+    <div class="col-xs-7">
+    </div>
+    <div class="col-xs-5">
+      {{play-list songs=model}}
+    </div>
+  </div>
 </div>
 
 {{outlet}}
