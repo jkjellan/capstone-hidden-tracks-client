@@ -2,7 +2,7 @@ Did this work?
 <div>
   <h2>Hidden Tracks</h2>
     {{#each model as |song| }}
-      <p>{{song.song_title}}, {{song.song_url}}, {{song.user.email}}</p>
+      <p>{{song.id}}, {{song.song_title}}, {{song.song_url}}, {{song.user.email}}, {{song.user.id}}</p>
     {{/each}}
 </div>
 
