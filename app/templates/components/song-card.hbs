@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="card-block">
+    <h4 class="card-title">{{song.id}} - {{song.song_title}} - {{song.artist_name}}</h4>
+  </div>
+  <div class="playlist-video-wrapper">
+    <iframe class="card-img-top" width="auto" height="auto" src="{{song.song_url}}" frameborder='0'></iframe>
+  </div>
+  <div class="my-song-card card-block">
+    <div class="btn-group dropup">
+      <button type="button" data-toggle="dropdown" class="btn btn-default my-btn-circle dropdown-toggle"><span class="glyphicon glyphicon-chevron-up"></span></button>
+      <ul class="dropdown-menu">
+        <li class=dropdown-submenu id="sign-up-modal"><a href="#">Edit Song</a></li>
+        <li class=dropdown-submenu id="sign-in-modal"><a href="#">Delete Song</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
