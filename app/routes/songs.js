@@ -16,5 +16,5 @@ export default Ember.Route.extend({
       this.get('flashMessages')
       .danger('Please sign in to view this page.');
     }
-  }
+  },
 });
