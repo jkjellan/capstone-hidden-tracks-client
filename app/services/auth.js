@@ -7,6 +7,7 @@ export default Ember.Service.extend({
   isAuthenticated: Ember.computed.bool('credentials.token'),
 
   signUp (credentials) {
+    console.log('auth service doing its thing');
     return this.get('ajax').post('/sign-up', {
       data: {
         credentials: {
@@ -19,6 +20,7 @@ export default Ember.Service.extend({
   },
 
   signIn (credentials) {
+    console.log(this.get('credentials'))
     return this.get('ajax').post('/sign-in', {
       data: {
         credentials: {

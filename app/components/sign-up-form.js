@@ -7,12 +7,15 @@ export default Ember.Component.extend({
   credentials: {},
 
   actions: {
-    submit () {
-      this.sendAction('submit', this.get('credentials'));
+    submitJimForm () {
+      console.log('sign-up-form.js send submit action with credentials', this.get('credentials'))
+      this.sendAction('submitJim', this.get('credentials'));
     },
 
     reset () {
+      console.log('sign-up-form.js resets credentials: ', this.get('credentials'))
       this.set('credentials', {});
+      console.log('credentials now: ', this.get('credentials'))
     },
   },
 });

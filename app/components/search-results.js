@@ -1,11 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  searchResults: Ember.inject.service('search'),
+  tagName: 'form',
+  classNames: ['form-horizontal'],
+
+  youtube: {},
 
   actions: {
-    search(query) {
-      this.get('searchResults').search(query)
+    search() {
+      console.log('search-results.js sending submitQuery action to songs.hbs with youtube',this.get('youtube'))
+      this.sendAction('submitQuery', this.get('youtube'))
     }
   }
 });

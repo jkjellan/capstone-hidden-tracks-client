@@ -1,11 +1,12 @@
 import Ember from 'ember';
-import { storageFor } from 'ember-local-storage';
+// import { storageFor } from 'ember-local-storage';
 
 export default Ember.Service.extend({
-  // searchStore: storageFor('search'),
-  search (query) {
+
+  searchYoutube (youtube) {
+    // console.log('search.js searchYouTube(youtube), youtube is', this.get('youtube'))
     const base = 'https://www.googleapis.com/youtube/v3/search?key=AIzaSyCbVcF-CQLSKJIrAtwywxY9Uw8lcrggE30&part=snippet&maxResults=6&videoEmbeddable=true&type=video&q=';
-    const q = query;
+    const q = youtube.query;
     const url = base + q;
     console.log('first line of youtubeApicall')
     return Ember.$.ajax({

@@ -5,7 +5,8 @@ export default Ember.Route.extend({
   flashMessages: Ember.inject.service(),
 
   actions: {
-    signUp (credentials) {
+    signUpJim (credentials) {
+      console.log('sign-up-form.js send submit action, which triggered this signUp action in sign-up.js,getting passed credentials gathered from input by storage:,', credentials)
       this.get('auth').signUp(credentials)
       .then(() => this.get('auth').signIn(credentials))
       .then(() => this.transitionTo('application'))
